@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2010 by Your Company
+
+
+# these should not be edited
+name: keep_me_logged
+moduleid: org.adamantio.kml
+guid: 9aba42ab-843e-41b7-9e76-6eee3de7c9f5
+platform: iphone
+minsdk: 1.6.2
