@@ -67,7 +67,7 @@
 
 -(void)_listenerAdded:(NSString *)type count:(int)count
 {
-	if (count == 1 && [type isEqualToString:@"my_event"])
+	if (count == 1 && [type isEqualToString:@"credentials_saved"])
 	{
 		// the first (of potentially many) listener is being added 
 		// for event named 'my_event'
@@ -76,7 +76,7 @@
 
 -(void)_listenerRemoved:(NSString *)type count:(int)count
 {
-	if (count == 0 && [type isEqualToString:@"my_event"])
+	if (count == 0 && [type isEqualToString:@"credentials_saved"])
 	{
 		// the last listener called for event named 'my_event' has
 		// been removed, we can optionally clean up any resources
@@ -85,6 +85,55 @@
 }
 
 #pragma Public APIs
+
+
+-(id)saveCredentialForHost:(id)args
+{
+  ENSURE_SINGLE_ARG(args,NSDictionary);
+  NSString *result = @"OK";
+  
+  @try {
+    NSString *thehost = [TiUtils stringValue:[args objectForKey:@"host"]];
+    NSInteger port = [TiUtils intValue:[args objectForKey:@"port"]];
+    NSString *username = [TiUtils stringValue:[args objectForKey:@"username"]];
+    NSString *password= [TiUtils stringValue:[args objectForKey:@"password"]];
+    
+    NSURLCredential *authenticationCredentials = [NSURLCredential credentialWithUser:username 
+                                                                            password:password 
+                                                                         persistence:NSURLCredentialPersistenceForSession];
+
+    NSURLProtectionSpace *protectionSpace = [[NSURLProtectionSpace alloc] initWithHost:thehost
+                                                                                   port:port
+                                                                               protocol:@"http"
+                                                                                  realm:@"nil" 
+                                                                  authenticationMethod:nil];
+    
+    [[NSURLCredentialStorage sharedCredentialStorage] setDefaultCredential:authenticationCredentials
+                                                          forProtectionSpace:protectionSpace];
+    
+    
+    if ([self _hasListeners:@"credentials_saved"])
+    {
+    
+      NSDictionary *event = [NSDictionary dictionaryWithObjectsAndKeys:@"OK", @"result", nil];
+      [self fireEvent:@"credentials_saved" withObject:event];
+    }
+    
+  } 
+  @catch (id exception) {
+    result = [NSString stringWithFormat:@"[INFO] %@ ", exception];
+    
+    if ([self _hasListeners:@"credentials_error"])
+      {
+      
+      NSDictionary *event = [NSDictionary dictionaryWithObjectsAndKeys:result, @"result", nil];
+      [self fireEvent:@"credentials_error" withObject:event];
+      }
+    
+  }
+  
+	return result;
+}
 
 -(id)example:(id)args
 {

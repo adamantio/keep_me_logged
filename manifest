@@ -3,10 +3,10 @@
 # during compilation, packaging, distribution, etc.
 #
 version: 0.1
-description: My module
-author: Your Name
-license: Specify your license
-copyright: Copyright (c) 2010 by Your Company
+description: Keep Me Logged
+author: Abraham Barrera
+license: Apache Public License (version 2) 
+copyright: Copyright (c) 2010 by Adamantio
 
 
 # these should not be edited

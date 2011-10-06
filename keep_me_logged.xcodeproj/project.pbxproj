@@ -36,19 +36,20 @@
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "keep_me_logged";
+			remoteInfo = keep_me_logged;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24DD6CF71134B3F500162E58 /* OrgAdamantioKmlModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OrgAdamantioKmlModule.h"; path = "Classes/OrgAdamantioKmlModule.h"; sourceTree = "<group>"; };
-		24DD6CF81134B3F500162E58 /* OrgAdamantioKmlModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OrgAdamantioKmlModule.m"; path = "Classes/OrgAdamantioKmlModule.m"; sourceTree = "<group>"; };
+		24DD6CF71134B3F500162E58 /* OrgAdamantioKmlModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrgAdamantioKmlModule.h; path = Classes/OrgAdamantioKmlModule.h; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* OrgAdamantioKmlModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrgAdamantioKmlModule.m; path = Classes/OrgAdamantioKmlModule.m; sourceTree = "<group>"; };
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
-		24DE9E0F11C5FE74003F90F6 /* OrgAdamantioKmlModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OrgAdamantioKmlModuleAssets.h"; path = "Classes/OrgAdamantioKmlModuleAssets.h"; sourceTree = "<group>"; };
-		24DE9E1011C5FE74003F90F6 /* OrgAdamantioKmlModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OrgAdamantioKmlModuleAssets.m"; path = "Classes/OrgAdamantioKmlModuleAssets.m"; sourceTree = "<group>"; };
-		AA747D9E0F9514B9006C5449 /* OrgAdamantioKml_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OrgAdamantioKml_Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		24DE9E0F11C5FE74003F90F6 /* OrgAdamantioKmlModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrgAdamantioKmlModuleAssets.h; path = Classes/OrgAdamantioKmlModuleAssets.h; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* OrgAdamantioKmlModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrgAdamantioKmlModuleAssets.m; path = Classes/OrgAdamantioKmlModuleAssets.m; sourceTree = "<group>"; };
+		6A52AA4A14360D8B00658AD8 /* app.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* OrgAdamantioKml_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgAdamantioKml_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libOrgAdamantioKml.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libOrgAdamantioKml.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC07E0554694100DB518D /* libOrgAdamantioKml.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOrgAdamantioKml.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,12 +75,13 @@
 		0867D691FE84028FC02AAC07 /* keep_me_logged */ = {
 			isa = PBXGroup;
 			children = (
+				6A52AA4914360D8B00658AD8 /* example */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
-			name = "keep_me_logged";
+			name = keep_me_logged;
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
@@ -110,6 +112,14 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		6A52AA4914360D8B00658AD8 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				6A52AA4A14360D8B00658AD8 /* app.js */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -138,8 +148,8 @@
 			);
 			dependencies = (
 			);
-			name = "keep_me_logged";
-			productName = "keep_me_logged";
+			name = keep_me_logged;
+			productName = keep_me_logged;
 			productReference = D2AAC07E0554694100DB518D /* libOrgAdamantioKml.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -213,15 +223,15 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
-				DSTROOT = "/tmp/OrgAdamantioKml.dst";
+				DSTROOT = /tmp/OrgAdamantioKml.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OrgAdamantioKml_Prefix.pch";
+				GCC_PREFIX_HEADER = OrgAdamantioKml_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = "OrgAdamantioKml";
+				PRODUCT_NAME = OrgAdamantioKml;
 			};
 			name = Debug;
 		};
@@ -231,12 +241,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = "/tmp/OrgAdamantioKml.dst";
+				DSTROOT = /tmp/OrgAdamantioKml.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OrgAdamantioKml_Prefix.pch";
+				GCC_PREFIX_HEADER = OrgAdamantioKml_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = "OrgAdamantioKml";
+				PRODUCT_NAME = OrgAdamantioKml;
 			};
 			name = Release;
 		};
